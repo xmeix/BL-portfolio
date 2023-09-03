@@ -1,12 +1,9 @@
 import { Element } from "react-scroll";
 import "./App.css";
-import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/hero/Hero";
-import About from "./components/about/About";
-import Work from "./components/work/Work";
-import Cursor from "./components/cursor/Cursor";
+import Navbar from "./components/navbar/Navbar"; 
 import { useEffect, useState } from "react";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import UnderConstruction from "./components/underconstruction/UnderConstruction";
 
 function App() {
   // -------------------------------------------------------------
@@ -56,22 +53,12 @@ function App() {
   };
   return (
     <div className="app">
-      <Cursor />
-      {!isOpen && responsive && (
-        <div className="hamMenu-container" onClick={handleMenu}>
-          <MenuRoundedIcon className="hamMenu"   />
-        </div>
-      )}
+ 
       {!responsive && <Navbar />}
       <Element name="hero">
-        <Hero />
+       <UnderConstruction/>
       </Element>
-      <Element name="work">
-        <Work />
-      </Element>
-      <Element name="about">
-        <About />
-      </Element>
+      
     </div>
   );
 }
