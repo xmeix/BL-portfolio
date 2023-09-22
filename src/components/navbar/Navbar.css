@@ -1,45 +1,29 @@
-.active {
-}
-.active::after {
-  content: "💙";
-  font-size: 8px;
-  position: relative;
-  left: 1em;
-  top: -0.3em;
-}
-
 .navbar {
+  text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 1.5em 12em;
-  margin: 0 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 999;
-
-  background-color: white;
-  /* border-radius: 50px; */
+  gap: 3em;
+  padding: 1em 4em;
 }
-.navbar .first-nav {
+.navbar .logo {
   flex: 1;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: var(--meix) !important;
 }
-.navbar .second-nav {
+.navbar .nav-items {
+  /* font-family: var(--oswald); */
   flex: 2;
-  display: flex;
   list-style: none;
-  justify-content: flex-end;
+  display: flex;
   align-items: center;
-  gap: 1em;
-}
-
-.navbar .link {
-  margin: 0 0 0 1em;
-  color: var(--black);
-  font-family: var(--poor);
+  justify-content: end;
+  gap: 2.5em;
+  font-weight: 600;
   font-size: 13px;
   cursor: pointer;
+  text-transform: uppercase;
 }

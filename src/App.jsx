@@ -1,9 +1,7 @@
-import { Element } from "react-scroll";
 import "./App.css";
-import Navbar from "./components/navbar/Navbar"; 
+import Navbar from "./components/navbar/Navbar";
 import { useEffect, useState } from "react";
-import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import UnderConstruction from "./components/underconstruction/UnderConstruction";
+import Showcase from "./pages/showcase/Showcase";
 
 function App() {
   // -------------------------------------------------------------
@@ -53,12 +51,8 @@ function App() {
   };
   return (
     <div className="app">
- 
-      {!responsive && <Navbar />}
-      <Element name="hero">
-       <UnderConstruction/>
-      </Element>
-      
+      <Navbar />
+      <Showcase />
     </div>
   );
 }

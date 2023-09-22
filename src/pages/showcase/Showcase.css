@@ -1,0 +1,16 @@
+.showcase {
+  /* border: solid 1px white; */
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.showcase-text {
+  width: 100%;
+  /* font-family: var(--meix) !important; */
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 60px;
+  padding: 1em;
+  font-weight: 800;
+}
