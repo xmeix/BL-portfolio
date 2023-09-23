@@ -7,12 +7,12 @@ const Work = () => {
     <div className="work">
       <Titles title1={"check out my"} title2={"recent projects"} />
       <div className="projects">
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        <Project title="Minimalist" />
+        <Project title="Summify" />
+        <Project title="Sh-missions" />
+        <Project title="BledBay" />
+        <Project title="WassimMihoub" />
+        <Project title="DialyseCenterManager" />
       </div>
     </div>
   );

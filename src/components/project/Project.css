@@ -2,9 +2,57 @@
   border: solid 1px gray;
   height: 300px;
   flex: calc(100% / 4);
+  position: relative;
+  transition: all 0.5s ease;
 }
 
-@media screen and (min-width: 601px) and (max-width: 800px) {
+.project .project-title {
+  position: absolute;
+  background-color: rgba(122, 122, 122, 0.034);
+  top: 50%;
+  width: 100%;
+  padding: 1em;
+  transition: all 0.5s ease;
+
+  color: var(--white);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.project .project-title::after,
+.project:hover .project-title::before {
+  position: absolute;
+  content: "";
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(4deg);
+  transition: all 0.5s ease;
+}
+.project .project-title::before,
+.project:hover .project-title::after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(-4deg);
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
   .project {
     flex: calc(100% / 3);
   }

@@ -1,6 +1,10 @@
 import "./Project.css";
-const Project = () => {
-  return <div className="project"> project </div>;
+const Project = ({ title }) => {
+  return (
+    <div className="project">
+      <div className="project-title"> {title} </div>
+    </div>
+  );
 };
 
 export default Project;
