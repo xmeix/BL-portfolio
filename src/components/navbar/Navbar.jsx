@@ -1,5 +1,4 @@
 import "./Navbar.css";
-import logo from "./../../../public/MEIX.svg";
 const Navbar = () => {
   return (
     <div className="navbar">

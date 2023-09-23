@@ -1,16 +1,39 @@
 .showcase {
   /* border: solid 1px white; */
-  height: 80vh;
+  height: 70vh;
   display: flex;
   align-items: center;
 }
-
+.showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid 1px white; */
+  height: 43vh;
+  width: 100%;
+  overflow: hidden;
+}
 .showcase-text {
+  white-space: nowrap;
   width: 100%;
   /* font-family: var(--meix) !important; */
   text-transform: uppercase;
   text-align: center;
-  font-size: 60px;
-  padding: 1em;
+  font-size: 80px;
+  padding: 0.5em 0;
   font-weight: 800;
+  animation: move 1.5s ease infinite;
+  cursor: default;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    /* opacity: 1; */
+    color: white;
+  }
+  50% {
+    /* opacity: 0.8; */
+    /* color: rgb(35, 36, 25); */
+  }
 }

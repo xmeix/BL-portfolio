@@ -2,6 +2,8 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import { useEffect, useState } from "react";
 import Showcase from "./pages/showcase/Showcase";
+import Work from "./pages/work/Work";
+import Contact1 from "./pages/contact/Contact1";
 
 function App() {
   // -------------------------------------------------------------
@@ -53,6 +55,8 @@ function App() {
     <div className="app">
       <Navbar />
       <Showcase />
+      <Work />
+      <Contact1 />
     </div>
   );
 }
