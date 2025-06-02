@@ -1,12 +1,13 @@
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo">MEIX</div>
       <ul className="nav-items">
-        <li>Showcase</li>
-        <li>work</li>
-        <li>Me!</li>
+        <NavLink to="/showcase">Showcase</NavLink>
+        <NavLink to="/work">Work</NavLink>
+        <NavLink to="/me">Me!</NavLink>
         <li className="nav-icon">
           <img
             width="32"

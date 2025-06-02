@@ -1,39 +1,24 @@
 .showcase {
-  /* border: solid 1px white; */
   height: 70vh;
+  position: relative;
+  background-color: var(--black);
+
   display: flex;
   align-items: center;
-}
-.showcase-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* border: solid 1px white; */
-  height: 43vh;
-  width: 100%;
+  justify-content: center;
   overflow: hidden;
-}
-.showcase-text {
-  white-space: nowrap;
-  width: 100%;
-  /* font-family: var(--meix) !important; */
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 80px;
-  padding: 0.5em 0;
-  font-weight: 800;
-  animation: move 1.5s ease infinite;
-  cursor: default;
+  cursor: crosshair;
 }
 
-@keyframes move {
-  0%,
-  100% {
-    /* opacity: 1; */
-    color: white;
-  }
-  50% {
-    /* opacity: 0.8; */
-    /* color: rgb(35, 36, 25); */
-  }
+.showcase-inner {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: fit-content; /* Set your preferred max width */
+  width: 100%; /* Allows it to shrink on small screens */
+  padding: 0 3rem; /* Optional: add some padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
 }

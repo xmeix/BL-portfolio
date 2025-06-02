@@ -1,9 +1,10 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
-import { useEffect, useState } from "react";
+import About from "./pages/about/About.jsx";
+import Contact from "./pages/contact/Contact.jsx";
 import Showcase from "./pages/showcase/Showcase";
-import Work from "./pages/work/Work";
-import Contact1 from "./pages/contact/Contact1";
+import Work from "./pages/work/Work.jsx";
 
 function App() {
   // -------------------------------------------------------------
@@ -54,9 +55,12 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+
       <Showcase />
+
       <Work />
-      <Contact1 />
+      <About />
+      <Contact />
     </div>
   );
 }

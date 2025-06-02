@@ -27,3 +27,8 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+
+.navbar .nav-items a {
+  color: white;
+  text-decoration: none;
+}

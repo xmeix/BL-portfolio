@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import Canvas from "../../components/canvas/Canvas";
+import TextSpan from "../../components/textSpan/TextSpan";
 import "./Showcase.css";
 
 const titles = [
-  "Hello",
-  "I am",
-  "Lamia",
-  "Known by",
-  "Meix",
-  "I am A",
-  "Software",
-  "Engineer,",
-  "A Web",
-  "Developer,",
-  "And from",
-  "Now on,",
-  "I am your",
-  "Favourite",
-  "Art maker.",
+  "Welcome!",
+  "I'm",
+  "Lamia BOUALOUACHE,",
+  "Also known as",
+  "Meix.",
+  "A passionate",
+  "Software Engineer",
+  "Creative Web Developer,",
+  "Innovator at heart,",
+  "Explorer of ideas,",
+  "From now on,",
+  "Let me be your",
+  "Inspiration.",
+  "Let's create art together.",
 ];
 
 const Showcase = () => {
@@ -24,19 +25,29 @@ const Showcase = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Increment the title index, looping back to the start if we reach the end
       setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 1500);
+    }, 2000);
 
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="showcase">
-      <div className="showcase-inner">
-        <div className="showcase-text">{titles[currentTitleIndex]}</div>
+    <div className="showcase" style={{ position: "relative" }}>
+      <Canvas />
+      <div
+        className="showcase-inner"
+        style={{ position: "relative", zIndex: 1 }}
+      >
+        <div key={currentTitleIndex}>
+          {titles[currentTitleIndex].split("").map((letter, i) => {
+            const key = `${letter}-${i}`;
+            return (
+              <TextSpan key={key}>
+                {letter === " " ? "\u00A0" : letter}
+              </TextSpan>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

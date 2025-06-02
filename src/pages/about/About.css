@@ -1,0 +1,102 @@
+.about {
+  background-color: var(--white);
+  color: var(--black);
+  position: relative;
+  height: fit-content;
+
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2em;
+
+  padding: 3em 4em;
+}
+
+.about::after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  transform-origin: top left;
+  z-index: -1;
+  transform: skewY(4deg);
+}
+
+.about::before {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  z-index: -1;
+  transform: skewY(-4deg);
+}
+
+.about-me {
+  flex: 1;
+}
+.skills {
+  flex: 1;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+.about .h1-description {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+}
+
+.about-me .radio-buttons {
+  display: flex;
+  gap: 1rem;
+
+  margin: 1rem 0;
+}
+
+.about-me .radio-buttons label {
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  display: flex;
+  align-items: center;
+}
+.about-me .radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.about-me .radio-buttons .radio-label::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  border: dashed 2px var(--black);
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.about-me .radio-buttons .radio-label.selected::before {
+  background-color: var(--black);
+}
+
+.about-me .radio-buttons .radio-label.selected {
+  color: var(--black);
+}
+
+.about-me .me-description {
+  font-size: 18px;
+}
