@@ -1,7 +1,7 @@
 import useCanvas from "../../hooks/useCanvas";
 
-const Canvas = () => {
-  const canvasRef = useCanvas();
+const Canvas = ({ isErasing }) => {
+  const canvasRef = useCanvas(isErasing); // Pass prop to hook
   return (
     <canvas
       ref={canvasRef}
@@ -18,5 +18,6 @@ const Canvas = () => {
     />
   );
 };
+
 
 export default Canvas;

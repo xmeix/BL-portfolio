@@ -5,6 +5,7 @@ import About from "./pages/about/About.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Showcase from "./pages/showcase/Showcase";
 import Work from "./pages/work/Work.jsx";
+import TechStacks from "./pages/techStacks/TechStacks.jsx";
 
 function App() {
   // -------------------------------------------------------------
@@ -57,9 +58,8 @@ function App() {
       <Navbar />
 
       <Showcase />
-
       <Work />
-      <About />
+      <TechStacks />
       <Contact />
     </div>
   );

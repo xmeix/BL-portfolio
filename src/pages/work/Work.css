@@ -3,10 +3,10 @@
   padding: 0 4em 8em 4em;
 }
 
-.work .projects {
-  margin: 1em 0;
+.projects-list {
+  padding: 2em;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1em;
+  flex-direction: column;
+
+  gap: 3em;
 }

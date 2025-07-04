@@ -1,0 +1,45 @@
+.carousel-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.carousel-buttons .carousel-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.carousel-buttons .arrow-btn {
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  display: flex;
+  padding: 1.5em 0;
+}
+.carousel-buttons .carousel-button.prev {
+  transform: rotate(180deg);
+  justify-content: flex-end;
+}
+.carousel-buttons .arrow-btn:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(40px, 0);
+}
+
+.carousel-buttons .carousel-button.next {
+  justify-content: flex-end;
+}
+
+.carousel-buttons .section-title {
+  font-size: 3vw;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .carousel-buttons .section-title {
+    font-size: 2em;
+  }
+}

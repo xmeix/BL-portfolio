@@ -1,0 +1,42 @@
+.techStacks {
+  background-color: var(--white);
+  color: var(--black);
+  position: relative;
+  height: fit-content;
+
+  display: flex; 
+  align-items: flex-start;
+  gap: 2em;
+
+  padding: 3em 4em;
+}
+
+.techStacks::after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  transform-origin: top left;
+  z-index: -1;
+  transform: skewY(4deg);
+}
+
+.techStacks::before {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  z-index: -1;
+  transform: skewY(-4deg);
+}

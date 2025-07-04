@@ -22,6 +22,7 @@ const titles = [
 
 const Showcase = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [isErasing, setIsErasing] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,7 +34,33 @@ const Showcase = () => {
 
   return (
     <div className="showcase" style={{ position: "relative" }}>
-      <Canvas />
+      {/* Pass isErasing as prop */}
+      <Canvas isErasing={isErasing} />
+      <button
+        className="eraser-btn"
+        style={{
+          margin: "0 2.5em",
+          position: "absolute",
+          bottom: 20,
+          right: 20,
+          zIndex: 2,
+          padding: "16px",
+          background: "transparent",
+          fontSize: "1.2rem",
+          border: "none",
+          cursor: "pointer",
+          transition: "transform 0.3s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "scale(-1.1)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "scale(100%)";
+        }}
+        onClick={() => setIsErasing((prev) => !prev)}
+      >
+        {isErasing ? "🎨" : "🧽"}
+      </button>
       <div
         className="showcase-inner"
         style={{ position: "relative", zIndex: 1 }}
