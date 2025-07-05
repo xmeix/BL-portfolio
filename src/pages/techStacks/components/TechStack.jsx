@@ -1,13 +1,11 @@
 import "./TechStack.css";
-const TechStack = ({ title, icon, percentage }) => {
+const TechStack = ({ title, icon }) => {
   return (
     <div className="techStack">
-      <div className="techBar">
-        <div className="coloredTechBar" style={{ height: percentage }}>
-          <p className="percentage">{percentage}</p>
-        </div>
+      <div className="techLogoWrapper">
+        <img src={icon} alt={title} className="techLogo" />
       </div>
-      <img src={icon} alt={title} />
+      <span className="techName">{title}</span>
     </div>
   );
 };

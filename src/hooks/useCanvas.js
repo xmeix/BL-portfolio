@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 
-
 const useCanvas = (isErasing = false) => {
   const canvasRef = useRef(null);
   const drawing = useRef(false);
@@ -52,8 +51,8 @@ const useCanvas = (isErasing = false) => {
         context.shadowBlur = 0;
       } else {
         context.globalCompositeOperation = "source-over";
-        context.strokeStyle = "#8f5aff";
-        context.shadowColor = "#8f5aff";
+        context.strokeStyle = "#9cdcfe";
+        context.shadowColor = "#9cdcfe";
         context.shadowBlur = 0;
         context.lineWidth = 20;
       }
@@ -90,7 +89,7 @@ const useCanvas = (isErasing = false) => {
       context.save();
       context.globalAlpha = 0.09;
       context.fillStyle = "#1d1d12";
-      context.shadowColor = "#1d1d12"; 
+      context.shadowColor = "#1d1d12";
       context.shadowOffsetX = 5;
       context.shadowOffsetY = 5;
 

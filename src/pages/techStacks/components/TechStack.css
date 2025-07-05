@@ -2,36 +2,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1px;
+  margin: 12px;
+  transition: transform 0.2s;
+}
+.techStack:hover {
+  transform: scale(1.08) rotate(-3deg);
+  z-index: 2;
 }
 
-.techBar {
-  position: relative;
-  width: 20px;
-  height: 200px;
-  background: #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
+.techLogoWrapper {
+  background: #fff;
+  border: solid 2px var(--violet);
+  border-radius: 5%;
+  padding: 0.9em;
   margin-bottom: 0.5em;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+.techStack:hover .techLogoWrapper {
+  box-shadow: 0 8px 24px rgba(33, 150, 243, 0.18);
 }
 
-.coloredTechBar {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background: var(--dark-gray);
-  border-radius: 8px 8px 0 0;
-  transition: height 0.4s;
-  position: relative;
+.techLogo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
 }
-.coloredTechBar .percentage {
-  position: absolute;
-  bottom: 2em;
 
-  font-size: 0.6em;
-  color: var(--white);
+.techName {
+  margin-top: 0.3em;
+  color: var(--dark-gray);
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-align: center;
 }

@@ -4,11 +4,26 @@
   position: relative;
   height: fit-content;
 
-  display: flex; 
-  align-items: flex-start;
-  gap: 2em;
-
-  padding: 3em 4em;
+  padding: 4em;
+}
+.techStacks-content {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+@media screen and (min-width: 1024px) {
+  .techStacks-content {
+    flex-direction: row;
+  }
+  .techStacks-description {
+    flex: 50%;
+  }
+  .techStacks-carousel {
+    flex: 50%;
+  }
 }
 
 .techStacks::after {
@@ -39,4 +54,40 @@
   transform-origin: top left;
   z-index: -1;
   transform: skewY(-4deg);
+}
+
+.swiper-wrapper {
+  border-radius: 50px;
+}
+
+.techStacks .techStacks-description {
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  box-shadow: 0 4px 32px rgba(33, 150, 243, 0.1),
+    0 1.5px 8px rgba(33, 150, 243, 0.06);
+  max-width: 540px;
+  padding: 2.2em 2em 2em 2em;
+  align-self: center;
+  border-radius: 18px;
+  font-size: 1.08em;
+  color: var(--dark-gray);
+  backdrop-filter: blur(2px);
+  transition: box-shadow 0.2s;
+}
+
+.techStacks .techStacks-description blockquote {
+  margin: 1.2em 0 0 0;
+  padding-left: 1em;
+  border-left: 3px solid var(--violet);
+  color: var(--dark-gray);
+  font-style: italic;
+  font-size: 0.98em;
+  background: none;
+}
+
+.special-text {
+  color: var(--violet);
+  font-weight: 600;
+  font-size: 1.1em;  
+ 
 }

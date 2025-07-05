@@ -10,7 +10,7 @@ const TextSpan = ({ children }) => {
     controls.start({
       scaleX: [1, 1.08, 0.96, 1.04, 0.98, 1],
       scaleY: [1, 0.94, 1.04, 0.98, 1.01, 1],
-      color: colorSet ? "#fbfbfb" : "#8f5aff",
+      color: colorSet ? "#fbfbfb" : "#9cdcfe",
       transition: {
         duration: 0.6,
         times: [0, 0.2, 0.4, 0.6, 0.8, 1],
